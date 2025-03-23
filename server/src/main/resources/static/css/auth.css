@@ -1,0 +1,65 @@
+/* auth.css */
+
+/* Общие стили для страниц авторизации */
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f8ff; /* Светлый фон */
+    font-family: Arial, sans-serif; /* Шрифт для страницы */
+}
+
+h1 {
+    margin-bottom: 20px; /* Отступ снизу для заголовка */
+    color: #333; /* Цвет заголовка */
+}
+
+form {
+    background-color: #ffffff; /* Белый фон для формы */
+    padding: 30px; /* Отступы внутри формы */
+    border-radius: 10px; /* Закругленные углы формы */
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1); /* Тень под формой */
+    width: 300px; /* Ширина формы */
+    text-align: center; /* Центрирование текста внутри формы */
+}
+
+input[type="email"],
+input[type="password"] {
+    width: 90%; /* Полная ширина для полей ввода */
+    padding: 10px; /* Отступы внутри полей ввода */
+    margin: 10px 0; /* Отступы сверху и снизу */
+    border: 1px solid #ddd; /* Светлая рамка */
+    border-radius: 5px; /* Закругленные углы полей ввода */
+    font-size: 16px; /* Размер шрифта */
+}
+
+button {
+    background-color: #008cba; /* Цвет кнопки */
+    color: white; /* Цвет текста на кнопке */
+    border: none; /* Без рамки */
+    border-radius: 5px; /* Закругленные углы кнопки */
+    padding: 10px; /* Отступы внутри кнопки */
+    width: 100%; /* Полная ширина кнопки */
+    font-size: 16px; /* Размер шрифта */
+    cursor: pointer; /* Курсор при наведении */
+    transition: background-color 0.3s; /* Плавный переход цвета фона */
+}
+
+button:hover {
+    background-color: #005f7a; /* Темнее цвет кнопки при наведении */
+}
+
+p {
+    margin-top: 10px; /* Отступ сверху для параграфа */
+}
+
+a {
+    color: #008cba; /* Цвет ссылки */
+    text-decoration: none; /* Без подчеркивания */
+}
+
+a:hover {
+    text-decoration: underline; /* Подчеркивание при наведении */
+}

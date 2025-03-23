@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Результаты поиска - WanderGlobe</title>
+    <link rel="stylesheet" href="search.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="WanderGlobe Logo">
+        </div>
+    </header>
+
+    <main>
+        <h1>Результаты поиска</h1>
+
+        <!-- Раздел с краткой информацией о поиске -->
+        <section class="search-summary">
+            <p>Направление: <span id="destination">—</span></p>
+            <p>Дата заезда и отъезда: <span id="checkInCheckOut">—</span></p>
+            <p>Количество гостей и номеров: <span id="guests">—</span></p>
+        </section>
+
+        <!-- Результаты поиска (статические примеры) -->
+        <section class="search-results">
+            <h2>Доступные варианты размещения</h2>
+            <div class="result">
+                <img src="images/hotel.jpeg" alt="Отель Пример 1">
+                <div>
+                    <h3>Отель Пример 1</h3>
+                    <p>Описание: Небольшой уютный отель с видом на море.</p>
+                    <p>Цена: 5000 руб/ночь</p>
+                </div>
+            </div>
+            <div class="result">
+                <img src="images/hotel2.jpg" alt="Отель Пример 2">
+                <div>
+                    <h3>Отель Пример 2</h3>
+                    <p>Описание: Удобное расположение в центре города.</p>
+                    <p>Цена: 7000 руб/ночь</p>
+                </div>
+            </div>
+            <div class="result">
+                <img src="images/hotel3.jpg" alt="Отель Пример 3">
+                <div>
+                    <h3>Отель Пример 3</h3>
+                    <p>Описание: Современные удобства и бесплатный завтрак.</p>
+                    <p>Цена: 6000 руб/ночь</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2024 WanderGlobe. Все права защищены.</p>
+    </footer>
+
+    <script>
+        // Здесь мы можем добавить JavaScript для заполнения информации о поиске
+        // В этом примере данные передаются через URL-параметры (например: ?destination=Москва&checkIn=2023-12-20&checkOut=2023-12-30&guests=2)
+        const urlParams = new URLSearchParams(window.location.search);
+        document.getElementById('destination').textContent = urlParams.get('destination') || 'Не указано';
+        document.getElementById('checkInCheckOut').textContent = 
+            `${urlParams.get('checkIn') || 'Не указано'} - ${urlParams.get('checkOut') || 'Не указано'}`;
+        document.getElementById('guests').textContent = urlParams.get('guests') || 'Не указано';
+    </script>
+</body>
+</html>

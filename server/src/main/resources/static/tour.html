@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Управление турами</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body>
+<header>
+    <h1>Управление турами</h1>
+</header>
+
+<main>
+    <section id="tour-list">
+        <h2>Список туров</h2>
+        <table>
+            <thead>
+            <tr>
+                <th>ID</th>
+                <th>Название</th>
+                <th>Описание</th>
+                <th>Дата начала</th>
+                <th>Дата окончания</th>
+                <th>Маршрут</th>
+                <th>Отель</th>
+                <th>Транспорт</th>
+                <th>Гид</th>
+                <th>Доступность</th>
+                <th>Действия</th>
+            </tr>
+            </thead>
+            <tbody id="tours-table-body">
+            <!-- Здесь будут добавляться строки с данными о турах -->
+            </tbody>
+        </table>
+    </section>
+
+    <section id="tour-form">
+        <h2>Создать новый тур</h2>
+        <form id="create-tour-form">
+            <label for="name">Название:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="description">Описание:</label>
+            <input type="text" id="description" name="description">
+
+            <label for="startDate">Дата начала:</label>
+            <input type="date" id="startDate" name="startDate" required>
+
+            <label for="endDate">Дата окончания:</label>
+            <input type="date" id="endDate" name="endDate" required>
+
+            <label for="route">Маршрут:</label>
+            <input type="text" id="route" name="route">
+
+            <label for="hotel">Отель:</label>
+            <input type="text" id="hotel" name="hotel">
+
+            <label for="transport">Транспорт:</label>
+            <input type="text" id="transport" name="transport">
+
+            <label for="guide">Гид:</label>
+            <input type="text" id="guide" name="guide">
+
+            <label for="available">Доступность:</label>
+            <input type="checkbox" id="available" name="available">
+
+            <button type="submit">Создать тур</button>
+        </form>
+    </section>
+</main>
+
+<footer>
+    <p>© 2024 WanderGlobe. Все права защищены.</p>
+</footer>
+
+<script src="scripts.js"></script>
+</body>
+</html>

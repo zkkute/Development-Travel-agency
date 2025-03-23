@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Регистрация - WanderGlobe</title>
+    <link rel="stylesheet" href="auth.css"> <!-- Подключение стилей для страниц авторизации -->
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="WanderGlobe Logo">
+        </div>
+    </header>
+
+    <main>
+        <h1>Регистрация</h1>
+        <form action="register.php" method="POST" id="registerForm">
+            <input type="email" name="email" placeholder="Электронная почта" required>
+            <input type="password" name="password" placeholder="Пароль" required>
+            <button type="submit">Зарегистрироваться</button>
+        </form>
+        <p>Уже есть аккаунт? <a href="login.html">Войти</a></p>
+    </main>
+
+    <footer>
+        <p>© 2024 WanderGlobe. Все права защищены.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const registerForm = document.getElementById('registerForm');
+            registerForm.addEventListener('submit', (e) => {
+                const email = registerForm.querySelector('input[name="email"]').value.trim();
+
+                // Проверка на корректность электронной почты
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!emailRegex.test(email)) {
+                    alert('Пожалуйста, введите корректный адрес электронной почты.');
+                    e.preventDefault();
+                }
+            });
+        });
+    </script>
+</body>
+</html>

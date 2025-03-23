@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tour Agency</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+    <h1>Tour Agency</h1>
+    <nav>
+        <a href="#tours">Tours</a>
+        <a href="#clients">Clients</a>
+    </nav>
+</header>
+<main>
+    <section id="tours">
+        <h2>Available Tours</h2>
+        <div id="tours-list"></div>
+    </section>
+    <section id="clients">
+        <h2>Clients</h2>
+        <div id="clients-list"></div>
+    </section>
+</main>
+<script src="app.js"></script>
+
+<form id="add-client-form">
+    <h3>Add Client</h3>
+    <input type="text" name="name" placeholder="Name" required>
+    <input type="email" name="email" placeholder="Email" required>
+    <input type="text" name="phone" placeholder="Phone">
+    <button type="submit">Add</button>
+</form>
+
+</body>
+</html>

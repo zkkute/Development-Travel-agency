@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Управление клиентами</title>
+    <link rel="stylesheet" href="/static/css/client.css">
+</head>
+<body>
+<header>
+    <h1>Управление клиентами</h1>
+</header>
+
+<main>
+    <section id="client-list">
+        <h2>Список клиентов</h2>
+        <table>
+            <thead>
+            <tr>
+                <th>ID</th>
+                <th>Имя</th>
+                <th>Email</th>
+                <th>Паспортные данные</th>
+                <th>История</th>
+                <th>Действия</th>
+            </tr>
+            </thead>
+            <tbody id="clients-table-body">
+            <!-- Здесь будут добавляться строки с данными о клиентах -->
+            </tbody>
+        </table>
+    </section>
+
+    <section id="client-form">
+        <h2>Создать нового клиента</h2>
+        <form id="create-client-form">
+            <label for="name">Имя:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="passportData">Паспортные данные:</label>
+            <input type="text" id="passportData" name="passportData">
+
+            <label for="history">История:</label>
+            <input type="text" id="history" name="history">
+
+            <button type="submit">Создать клиента</button>
+        </form>
+    </section>
+</main>
+
+<footer>
+    <p>© 2024 WanderGlobe. Все права защищены.</p>
+</footer>
+
+<script src="scripts.js"></script>
+</body>
+</html>

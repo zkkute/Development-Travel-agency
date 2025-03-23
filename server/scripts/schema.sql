@@ -1,0 +1,17 @@
+CREATE DATABASE IF NOT EXISTS tour_agency;
+USE tour_agency;
+
+CREATE TABLE IF NOT EXISTS clients (
+    id BIGINT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    email VARCHAR(255) NOT NULL UNIQUE,
+    phone_number VARCHAR(20)
+);
+
+CREATE TABLE IF NOT EXISTS tours (
+    id BIGINT AUTO_INCREMENT PRIMARY KEY,
+    destination VARCHAR(255) NOT NULL,
+    price DECIMAL(10, 2) NOT NULL,
+    duration_days INT NOT NULL,
+    description TEXT
+);
